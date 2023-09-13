@@ -12,16 +12,20 @@
         let x=['rock','paper','scissors'];
         return x[Math.floor(Math.random()*x.length)];
     }
+    let playerScore=0;
+    let computerScore=0;
 
     function playRound(playerChoice,computerChoice){
         if(playerChoice===computerChoice)
         {
-            return 'draw by '+playerChoice;
+            return 'draw';
         }
         else if((playerChoice=='rock' && computerChoice=='scissors') || (playerChoice=='paper' && computerChoice=='rock') || (playerChoice=='scissors' && computerChoice=='paper') ){
+            playerScore++;
             return "Player scores by using "+playerChoice+" ,computer:"+computerChoice;
         }
         else{
+            computerScore++;
             return "computer scores by using "+computerChoice+" ,player:"+playerChoice;
         }
     }
@@ -34,6 +38,10 @@
                 //var z= a.toLowerCase
                 if(a.toLowerCase()=='rock' || a.toLowerCase()=='paper' || a.toLowerCase()=='scissors'){
                     var y=playRound(a,getComputerChoice());
+                    if(y=='draw');
+                    {
+                        i--;
+                    }
                     console.log(y);
                     
                 }
@@ -44,6 +52,13 @@
             }
         }
         play();
+        if(playerScore>computerScore){
+            console.log("Player wins");
+        }
+        else if(computerScore>playerScore){
+            console.log("Computer wins");
+        }
+        
     
   </script>
 </body>
