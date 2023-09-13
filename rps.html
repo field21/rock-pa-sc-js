@@ -12,6 +12,21 @@
         let x=['rock','paper','scissors'];
         return x[Math.floor(Math.random()*x.length)];
     }
+
+    function playRound(playerChoice,computerChoice){
+        if((playerChoice==="rock" && computerChoice==='rock') || (playerChoice==="paper" && computerChoice==='paper') || (playerChoice==="scissors" && computerChoice==='scissors')  )
+        {
+            return 'draw';
+        }
+        else if((playerChoice=='rock' && computerChoice=='scissors') || (playerChoice=='paper' && computerChoice=='rock') || (playerChoice=='scissors' && computerChoice=='paper') ){
+            return "Player scores";
+        }
+        else{
+            return "computer scores";
+        }
+        
+        console.log(playRound('rock',getComputerChoice()));
+    }
   </script>
 </body>
 </html>
