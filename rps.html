@@ -16,17 +16,19 @@
     function playRound(playerChoice,computerChoice){
         if(playerChoice===computerChoice)
         {
-            return 'draw';
+            return 'draw by '+playerChoice;
         }
         else if((playerChoice=='rock' && computerChoice=='scissors') || (playerChoice=='paper' && computerChoice=='rock') || (playerChoice=='scissors' && computerChoice=='paper') ){
-            return "Player scores";
+            return "Player scores by using "+playerChoice+" ,computer:"+computerChoice;
         }
         else{
-            return "computer scores";
+            return "computer scores by using "+computerChoice+" ,player:"+playerChoice;
         }
-        
-        console.log(playRound('rock',getComputerChoice()));
     }
+        
+        let y=playRound('rock',getComputerChoice());
+        console.log(y);
+    
   </script>
 </body>
 </html>
