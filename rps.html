@@ -32,12 +32,15 @@
             for(let i=0;i<5;i++){
                 var a=prompt("enter rock,paper,scissors");
                 //var z= a.toLowerCase
-                /*if(z!='rock' || z!='paper' || z!='scissors'){
+                if(a.toLowerCase()=='rock' || a.toLowerCase()=='paper' || a.toLowerCase()=='scissors'){
+                    var y=playRound(a,getComputerChoice());
+                    console.log(y);
+                    
+                }
+                else{
                     console.log("invalid input");
-                    return;
-                }*/
-                var y=playRound(a,getComputerChoice());
-                console.log(y);
+                }
+                
             }
         }
         play();
