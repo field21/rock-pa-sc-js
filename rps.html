@@ -38,10 +38,8 @@
                 //var z= a.toLowerCase
                 if(a.toLowerCase()==='rock' || a.toLowerCase()==='paper' || a.toLowerCase()==='scissors'){
                     var y=playRound(a,getComputerChoice());
-                    if(y=='draw');
-                    {
-                        i--;
-                    }
+                    //if(y==='draw');
+                    
                     console.log(y);
                     
                 }
@@ -58,6 +56,7 @@
         else if(computerScore>playerScore){
             console.log("Computer wins");
         }
+        else{console.log("it is a draw");}
 
     
   </script>
